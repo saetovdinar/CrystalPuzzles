@@ -10,7 +10,7 @@ export default function SchedulePage() {
 			setIsMobile(window.innerWidth <= 425);
 		};
 		window.addEventListener('resize', handleResize);
-		return () => {yield
+		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);

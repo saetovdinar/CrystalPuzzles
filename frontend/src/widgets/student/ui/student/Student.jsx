@@ -1,5 +1,5 @@
 import styles from './Student.module.scss';
-import Button from '@shared/ui/button';
+import { Button } from '@shared/ui';
 export default function Student() {
 	return (
 		<>

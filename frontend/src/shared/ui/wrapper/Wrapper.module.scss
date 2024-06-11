@@ -1,0 +1,15 @@
+@use '~styles/mixins' as *;
+
+
+.body {
+	display: flex;
+    flex-direction: column;
+	gap: 20px; 
+	align-items: end;
+	width: 100%;
+	max-width: 1081px;
+	@include sm () {
+		align-items: center;
+		max-width: 335px;
+	}
+}
