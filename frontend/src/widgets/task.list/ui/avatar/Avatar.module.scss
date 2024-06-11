@@ -1,0 +1,12 @@
+@use '~styles/mixins' as *;
+
+
+.avatar {
+	width: 100%;
+	max-width: 347px;
+	max-height: 347px;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	border-radius: var(--radius);
+	border: var(--border);
+}

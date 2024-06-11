@@ -1,0 +1,32 @@
+@use '~styles/mixins' as *;
+
+.exercises {
+	width: 714px;
+	height: 365px;
+	border-radius: var(--radius);
+	border: var(--border);
+	background: var(--bg-card);
+	overflow: hidden;
+
+	&_header {
+		@include font(var(--ff-first), 24px, 500);
+		height: 54px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #a1cbf1;
+		border-bottom: var(--border);
+		border-radius: var(--radius);
+		margin-bottom: 7px;
+	}
+	
+	&_item {
+		width: 714px;
+		height: 87px;
+		border-radius: var(--radius);
+		background: var(--bg-card);
+		border-top: var(--border);
+		border-bottom: var(--border);
+		margin-bottom: 7px;
+	}
+}

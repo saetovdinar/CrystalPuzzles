@@ -1,7 +1,8 @@
-import { Page, Button, Wrapper } from '@shared/ui';
-import { CalendarBlock } from '@features/calendar';
+import { Page, Button } from '@shared/ui';
+import { CalendarBlock, Wrapper } from '@features/calendar';
 import { ScheduleTable } from '@features/schedule';
 import { useState, useEffect } from 'react';
+
 export default function SchedulePage() {
 	const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
 	useEffect(() => {
@@ -9,7 +10,7 @@ export default function SchedulePage() {
 			setIsMobile(window.innerWidth <= 425);
 		};
 		window.addEventListener('resize', handleResize);
-		return () => {
+		return () => {yield
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);

@@ -2,12 +2,15 @@
 
 .container {
 	width: 100%;
-	max-width: 714px;
+	max-width: 1081px;
 	display: flex;
 	flex-direction: column;
 	gap: var(--gap);
 	@include sm() {
 		max-width: 335px;
+	}
+	@include md() {
+		max-width: 714px;
 	}
 	.textarea_container {
 		padding: 20px 10px 10px 10px;

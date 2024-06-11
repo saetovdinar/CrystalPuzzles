@@ -1,7 +1,7 @@
 import { Page, Button } from '@shared/ui';
-import { Feedback } from '@features/feedback';
-import { Wrapper } from '@shared/ui';
+import { Feedback, Wrapper } from '@features/feedback';
 import { useState, useEffect } from 'react';
+
 export default function FeedbackPage() {
 	const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
 	useEffect(() => {
@@ -15,16 +15,12 @@ export default function FeedbackPage() {
 	}, []);
 	return (
 		<Page title="Обратная связь">
-			<Wrapper width="100%" max_width="714px">
+			<Wrapper>
 				<Feedback>Оставить комментарий тренеру</Feedback>
 				{isMobile ? (
-					<>
-						<Button title="Отправить комментарий" width="335px" />
-					</>
+					<Button title="Отправить комментарий" width="335px" />
 				) : (
-					<>
-						<Button title="Отправить комментарий" width="100%" />
-					</>
+					<Button title="Отправить комментарий" width="100%" />
 				)}
 			</Wrapper>
 			{!isMobile && (

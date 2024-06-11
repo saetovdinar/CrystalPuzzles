@@ -1,8 +1,8 @@
-import { Feedback } from '@features/feedback/';
+import { Feedback, Wrapper } from '@features/feedback/';
 import { useState, useEffect } from 'react';
-import { Wrapper } from '@shared/ui';
 import { CardLink, RewardsPopup, Button } from '@shared/ui';
 import styles from './General.module.scss';
+
 export default function General() {
 	const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
 	const [reward, setReward] = useState(false);
@@ -55,7 +55,7 @@ export default function General() {
 				</div>
 			</CardLink>
 			{!isMobile && (
-				<Wrapper width="100%" max_width="714px">
+				<Wrapper>
 					<Feedback>Оставить комментарий тренеру</Feedback>
 					<Button title="Отправить комментарий" width="100%" />
 				</Wrapper>
