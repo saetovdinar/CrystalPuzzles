@@ -1,0 +1,31 @@
+@use '~styles/mixins' as *; 
+
+.container {
+	max-width: 135px;
+	max-height: 42px;
+	width: 100%;
+	padding: 10px 5px 10px 10px;
+	display: flex;
+	border: var(--border);
+	border-radius: var(--radius);
+	background-color: #e1f1f8;
+	gap: 9px;
+}
+.title {
+	font-family: var(--ff-first);
+	font-weight: var(--fw-medium);
+	font-size: 14px;
+	max-width: 135px;
+}
+.notifications_count {
+	font-family: var(--ff-first);
+	padding-left: 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: red;
+}
+
+
+
+

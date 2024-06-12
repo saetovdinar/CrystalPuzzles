@@ -27,8 +27,8 @@ export default function CreateGroup() {
 			</div>
 			<Button
 				title="Ученики"
-				width="347px"
-				height="57px"
+				width="335px"
+				height="42px"
 				onClick={() => navigate('/students')}
 			/>
 		</>

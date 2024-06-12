@@ -1,19 +1,31 @@
 @use '~styles/mixins' as *;
 
-.schedule-wrap {
+.schedule_wrap {
 	width: 347px;
+	@include sm() {
+		max-width: 192px;
+		
+	}
 }
 
-.content-wrap {
+.content_wrap {
 	border: var(--border);
 	border-radius: var(--radius);
 	background-color: var(--bg-card-second);
 	padding: 16px;
 	// margin-bottom: 15px;
+
+	@include sm() {
+		max-height: 150px;
+		padding: 5px;
+	}
 }
 
 .subtitle {
 	text-align: center;
+	@include sm() {
+		font-size: 16px;
+	}
 }
 
 .general_met_timetable_cont {
@@ -37,28 +49,52 @@
 	border-radius: 2px;
 	background-color: #2b2d91;
 	margin-bottom: 20px;
+
+	@include sm() {
+		background-color:black;
+		margin-bottom: 1px;
+		height: 1px;
+	}
 }
 
-.timetable-wrap {
+.timetable_wrap {
 	margin-top: 20px;
+
+	@include sm() {
+		margin-top: 0px;
+	}
 }
 
 .general_met_timetable_item {
 	margin-bottom: 10px;
 	width: 275px;
+	@include sm() {
+		max-width: 192px;
+		margin-bottom: 3px;
+	}
 }
 
 .general_met_timetable_item_descr {
+	text-transform: capitalize;
 	font-family: Roboto;
 	font-size: 20px;
 	font-weight: 500;
+	@include sm() {
+		font-size: 12px;
+		font-weight: 200;
+	}
 }
 
 .gen_timetable_diff_color {
 	color: #2b2d91;
+
+	@include sm() {
+		font-size: 16px;
+	
+	}
 }
 
-.btns-wrap {
+.btns_wrap {
 	margin-top: 15px;
 	display: grid;
 	gap: 20px;

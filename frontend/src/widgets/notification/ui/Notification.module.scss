@@ -61,25 +61,29 @@
 .cont_bottom_decor {
 	display: none;
 }
-@include md() {
+@include sm() {
 	
 .container {
+	max-width: 335px;
 	width: 100%;
 	padding: 10px 0px;
-	text-align: center;
 }
 .title  {
 	display: none;
 }
 .notifications {
+	
 	width: 100%;
 }
 .notification_item {
-	padding-left:  16px;
-	padding-right:  16px;
+
+	padding: 10px 16px 0 16px;
 	flex-direction: column;
 	&_text {
+		width: 100%;
 		font-size: 14px;
+		margin-bottom: 10px;
+		text-align: left;
 	}
 	&:first-child {
 		border-top: var(--border);

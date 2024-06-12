@@ -3,31 +3,40 @@
  
 .container {
 	width: 100%;
+	height: 42px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-.input {
-	&_text {
-		width: calc(100% - 30px);
-		height: 36px;
+	.input {
+		&_text {
+			width: calc(100% - 30px);
+			height: 36px;
 
-		font-family: Roboto;
-		font-size: 24px;
-		font-weight: 500;
+			font-family: Roboto;
+			font-size: 24px;
+			font-weight: 500;
 
-		background-color: inherit;
-		border: none;
-		outline: none;
-	}
-	&_checkbox {
-		width: 30px;
-		height: 30px;
+			background-color: inherit;
+			border: none;
+			outline: none;
+			&::placeholder {
+				opacity: 1;
+				@include sm() {
+					font-size: 16px;
+					opacity: 1;
+				}
+				
+			}
+		}
+		&_checkbox {
+			width: 30px;
+			height: 30px;
 
-		border: var(--border);
-		border-radius: 6px;
+			border: var(--border);
+			border-radius: 6px;
 
-		// -moz-appearance: none;
-		// -webkit-appearance: none;
+			// -moz-appearance: none;
+			// -webkit-appearance: none;
 	}
 }
 }

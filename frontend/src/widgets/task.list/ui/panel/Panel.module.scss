@@ -1,16 +1,31 @@
 @use '~styles/mixins' as *;
 .panel {
 	display: flex;
-	gap: 20px;
+	gap: var(--gap);
 	flex-direction: column;
+	@include sm() {
+		gap: 9.3px;
+		font-size: 14px;
+	}
 }
-.name {
-	@include font(var(--ff-first), 20px, 500);
-	border: var(--border);
+.btn {
+	background-color: #A1CBF1;
+	color: black;
+	width: 345px;
+	@include sm() {
+		justify-content: space-between;
+		padding: 0px 30px 0 10px;
+		font-size: 12px;
+		width: 192px;
+		height: 37px;
+	}
+}
+.send_btn {
 	background: var(--bg-card);
 	width: 345px;
-	height: 57px;
-	padding: 6px 10px 5px 10px;
-	text-align: center;
-	border-radius: var(--radius);
+	@include sm() {
+		font-size: 12px;
+		width: 192px;
+		height: 37px;
+	}
 }

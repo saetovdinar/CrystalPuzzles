@@ -3,6 +3,7 @@
  
 .container {
 	width: 100%;
+
 	max-width: 714px;
 	padding: 20px;
 	border: var(--border);
@@ -15,10 +16,16 @@
 	&[data-form=false] {
 		padding: 0 20px;
 	}
+	@include sm() {
+		max-width: 335px;
+	}
 }
 .btn {
 	height: 49px;
 	margin-left: auto;
 	padding: 13px 24px;
-	border-radius: 10px;
+	border-radius: var(--radius);
+	@include sm() {
+		padding: 0px 25px;
+	}
 }

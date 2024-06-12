@@ -9,18 +9,36 @@
 	position: relative;
 }
 .container::after {
-	content: url('~assets/svg/search.svg');
+	content: '';
+	width: 35px;
+	height: 35px;
+	background-image: url('~assets/svg/search.svg');
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
 	position: absolute;
 	display: inline-block;
 	right: 5px;
+	@include sm() {
+		width: 20px;
+		height: 20px;
+		background-image: url('~assets/svg/search.svg');
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		right: 10px;
+	}
 }
 
 .input_text {
-	padding: 5px 10px 5px 30px;
+	padding: 5px 10px 5px 10px;
 	width: 100%;
 	font-family: Roboto;
 	font-size: 24px;
 	font-weight: 500;
 	border: var(--border);
 	border-radius: 10px;
+	@include sm() {
+		&::placeholder {
+			font-size: 16px;
+		}
+	}
 }

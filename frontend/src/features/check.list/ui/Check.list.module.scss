@@ -46,13 +46,26 @@
 	}
 }
 @include sm() { 
+	.container {
+		max-width: 335px;
+		gap: 11px;
+	}
 	.header {
 		font-size: 14px;
+		height: 42px;
 	}
 	.list {
-		 &_item_title {
-			@include font(var(--ff-second), 16px, 400);
-		 }
+		&_item {
+			height: 42px;
+			&_checkbox {
+				width: 30px;
+				height: 30px;
+			}
+			&_title {
+				
+				@include font(var(--ff-second), 16px, 400);
+			}
+		}
 		}
 	}
 
